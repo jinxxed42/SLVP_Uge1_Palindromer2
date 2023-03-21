@@ -2,7 +2,7 @@
 Console.WriteLine("Please input a string: ");
 String toCheck = Console.ReadLine();
 
-string[] ignoredChars = { " ", "_", "-", "!", "\"", "#", "¤", "%", "&", "/", "(", ")", "=", "+", "`", "\\", ",", "." };
+string[] ignoredChars = { " ", "_", "–", "—", "!", "\"", "#", "¤", "%", "&", "/", "(", ")", "=", "+", "`", "\\", ",", "." };
 
 string toCheckTrimmed = toCheck;
 
@@ -18,6 +18,8 @@ Array.Reverse(strArray);
 
 String reverseString = new string(strArray);
 
+toCheckTrimmed = toCheckTrimmed.ToLower();
+reverseString = reverseString.ToLower();
 
 
 if (toCheckTrimmed.Equals(reverseString))
